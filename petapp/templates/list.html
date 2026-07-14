@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Pet List - Pet Shop{% endblock %}
+
+{% block extra_css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'petapp/css/pet.css' %}">
+<link rel="stylesheet" href="{% static 'petapp/css/list.css' %}">
+{% endblock %}
+
+{% block content %}
+<header class="container">
+    <h1>Pet List</h1>
+    <a href="{% url 'pet_add' %}" class="btn-add">Add Pet</a>
+    <hr>
+</header>
+<main class="container">
+{% for pet in pets %}
+    <div class="pet-list-item container">
+        <h2>{{ pet.pet_name }}</h2>
+        <img src="{{ pet.pet_image.url }}" width="200">
+        <div class="pet-actions">
+            <a href="{% url 'pet_edit' pet.id %}">Edit</a>
+            <a href="{% url 'pet_delete' pet.id %}">Delete</a>
+        </div>
+    </div>
+{% empty %}
+    <div class="container"><h3>No Pets Found</h3></div>
+{% endfor %}
+</main>
+{% endblock %}

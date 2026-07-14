@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Add Pet - Pet Shop{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'petapp/css/pet.css' %}">
+<link rel="stylesheet" href="{% static 'petapp/css/add.css' %}">
+{% endblock %}
+
+{% block content %}
+<header class="container"><h1>Add Pet</h1></header>
+<main class="container">
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
+</main>
+{% endblock %}

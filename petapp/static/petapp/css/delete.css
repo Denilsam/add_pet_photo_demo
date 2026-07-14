@@ -1,0 +1,15 @@
+/* Styles specific to the delete confirmation page */
+.delete-box {
+    padding: 18px;
+    border: 1px solid #ffe6e6;
+    background: #fff7f7;
+    border-radius: 6px;
+}
+
+.delete-box b {
+    color: #a00;
+}
+
+form button {
+    background: #c62828;
+}

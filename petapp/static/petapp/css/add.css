@@ -1,0 +1,22 @@
+/* Styles specific to the add page (form) */
+form {
+    display: block;
+}
+
+label {
+    display: block;
+    margin: 10px 0 4px;
+    font-weight: 600;
+}
+
+input[type="text"], input[type="file"], textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.preview {
+    margin-top: 10px;
+}

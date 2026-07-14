@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Delete Pet - Pet Shop{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'petapp/css/pet.css' %}">
+<link rel="stylesheet" href="{% static 'petapp/css/delete.css' %}">
+{% endblock %}
+
+{% block content %}
+<header class="container"><h1>Delete Pet</h1></header>
+<main class="container">
+<p>Are you sure you want to delete <b>{{ object.pet_name }}</b>?</p>
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+</form>
+<br>
+<a href="{% url 'pet_list' %}">Cancel</a>
+</main>
+{% endblock %}

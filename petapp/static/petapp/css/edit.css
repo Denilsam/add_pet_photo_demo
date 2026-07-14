@@ -1,0 +1,7 @@
+/* Styles specific to the edit page — reuse add form styles and tweak */
+/* Keep same layout as add */
+@import url('add.css');
+
+.form-actions {
+    margin-top: 12px;
+}

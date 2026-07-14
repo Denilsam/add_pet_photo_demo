@@ -1,0 +1,28 @@
+/* Styles specific to the list page */
+.pet-list-item h2 {
+    margin: 0 0 8px 0;
+    font-size: 1.25rem;
+}
+
+.pet-list-item img {
+    display: block;
+    margin: 8px 0;
+    border-radius: 6px;
+}
+
+.pet-actions {
+    margin-top: 8px;
+}
+
+.pet-actions a {
+    padding: 6px 10px;
+    background: #eef7ff;
+    border-radius: 4px;
+    color: #0b79d0;
+}
+
+.pet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}

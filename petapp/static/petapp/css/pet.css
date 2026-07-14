@@ -1,0 +1,23 @@
+/* Pet-specific styles */
+.pet-list-item {
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.pet-actions a {
+    margin-right: 8px;
+}
+
+form button {
+    background: #0b79d0;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #095a9a;
+}
