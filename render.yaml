@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: petproject
+    env: python
+    plan: starter
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput"
+    startCommand: "gunicorn petproject.wsgi:application --bind 0.0.0.0:$PORT"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: petproject.settings
+      - key: DEBUG
+        value: 'False'
+      - key: ALLOWED_HOSTS
+        value: '0.0.0.0,localhost'
+      - key: SECRET_KEY
+        value: 'replace-me-with-a-secret'
+    disk: 1024
+
+databases:
+  - name: petproject-db
+    engine: postgres
+    plan: starter

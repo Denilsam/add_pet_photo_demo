@@ -1,6 +1,7 @@
-venv/
-__pycashe__/
-
+﻿venv/
+__pycache__/
+staticfiles/
 
 db.sqlite3
 media/
+
